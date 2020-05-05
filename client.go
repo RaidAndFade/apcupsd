@@ -87,7 +87,7 @@ func (c *Client) Status() (*Status, error) {
 		if err != nil {
 			return nil, err
 		}
-		fmt.Println(b[:n])
+		fmt.Println(string(b[:n]))
 		// Parse key/value pair into appropriate struct field
 		if err := s.parseKV(string(b[:n])); err != nil {
 			return nil, err
